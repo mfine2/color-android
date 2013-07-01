@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:scrollbars="vertical" >
+
+    <cn.try4.color.MyGridView
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/gridview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:horizontalSpacing="@dimen/gridview_horizontalSpacing"
+        android:numColumns="3"
+        android:paddingBottom="44dp"
+        android:verticalSpacing="@dimen/gridview_verticalSpacing" >
+    </cn.try4.color.MyGridView>
+    <!-- GridView 的 margin padding实在当前屏幕产生，而不是在GridView的最下面内容. marginStart, marginBottom则是在内容的左右两面 -->
+
+</ScrollView>

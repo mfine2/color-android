@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">名·色彩</string>
+    <string name="action_settings">Settings</string>
+    <string name="startup">天空是蓝色的\n而你却是粉色的</string>
+    <string name="adtext">佳能(中国) - “你好,色彩”:IXUS 伊克萨斯</string>
+    <string name="copyright">\@李小4er</string>
+    <string name="beginTrip">去我的色彩之旅</string>
+
+    <string name="navList">首页</string>
+    <string name="navRandom">随机</string>
+    <string name="navAll">所有</string>
+    
+    <string name="more">更多</string>
+</resources>

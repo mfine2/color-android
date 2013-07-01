@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="zero6">#000</color>
+    <color name="fifteen6">#fff</color>
+    <color name="fourteen6">#eee</color>
+    <color name="nine6">#999</color>
+    <color name="fifteen8">#ffffffff</color>
+    <color name="zero8">#00000000</color>
+    <color name="curentbg">#4f000000</color>
+</resources>
