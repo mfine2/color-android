@@ -119,6 +119,7 @@ public class GuideActivity extends Activity {
 		Intent intent = new Intent();
 		intent.setClass(GuideActivity.this, StartupActivity.class);
 		startActivity(intent);
+		finish();
 	}
 
 	private void setFirstComed(boolean flag) {

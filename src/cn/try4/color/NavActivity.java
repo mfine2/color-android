@@ -21,12 +21,6 @@ public class NavActivity extends FragmentActivity {
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
-	}
-
-	@Override
-	protected void onResume() {// onCreate 无法获取元素在MainActivity setContentView之后???
-		// TODO Auto-generated method stub
-		super.onResume();
 		MyMetrics myMetrics = new MyMetrics(NavActivity.this);
 		bundle = myMetrics.getGridViewItemInfo();
 
@@ -42,6 +36,12 @@ public class NavActivity extends FragmentActivity {
 		navAll.setOnClickListener(new MyOnClickListener());
 
 		loadFragment(R.id.navList);
+	}
+
+	@Override
+	protected void onResume() {// onCreate 无法获取元素在MainActivity setContentView之后???
+		// TODO Auto-generated method stub
+		super.onResume();
 	}
 
 	@Override

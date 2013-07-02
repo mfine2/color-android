@@ -35,10 +35,11 @@ public final class R {
         public static final int ic_launcher=0x7f020000;
     }
     public static final class id {
-        public static final int action_settings=0x7f090011;
-        public static final int appname=0x7f090010;
+        public static final int action_settings=0x7f090012;
+        public static final int appname=0x7f090011;
         public static final int fragmentContainer=0x7f09000b;
         public static final int fragmentViewPager=0x7f09000a;
+        public static final int goMainActivity=0x7f090010;
         public static final int gridview=0x7f090009;
         public static final int image=0x7f090000;
         public static final int loading=0x7f09000c;
@@ -92,11 +93,17 @@ public final class R {
         /** 
         Base application theme, dependent on API level. This theme is replaced
         by AppBaseTheme from res/values-vXX/styles.xml on newer devices.
+
+
+
     
 
             Theme customizations available in newer API levels can go in
             res/values-vXX/styles.xml, while customizations related to
             backward-compatibility can go here.
+
+
+
         
 
         Base application theme for API 11+. This theme completely replaces
@@ -115,5 +122,6 @@ public final class R {
  All customizations that are NOT specific to a particular API-level can go here. 
          */
         public static final int AppTheme=0x7f070001;
+        public static final int CustomProgressStyle=0x7f070002;
     }
 }

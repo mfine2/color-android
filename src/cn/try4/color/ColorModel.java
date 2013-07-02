@@ -13,6 +13,9 @@ import org.apache.http.impl.client.DefaultHttpClient;
 import org.json.JSONArray;
 import org.json.JSONObject;
 
+import android.content.Context;
+import android.net.ConnectivityManager;
+import android.net.NetworkInfo;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Message;
@@ -43,22 +46,27 @@ public final class ColorModel {
 	 * return colorList; }
 	 */
 
-	public static final void getColorModel(final Handler handler){//why final?
-		Thread thread = new Thread(){
+	public static final void getColorModel(final Handler handler, final Context context) {// why final?
+		Thread thread = new Thread() {
 			@Override
 			public void run() {
 				// TODO Auto-generated method stub
-				//super.run();
-				getColorList();
+				// super.run();
 				Message message = new Message();
-				message.what = 0x123;
+				if(isNetworkConnected(context) == true){
+					getColorFromNetwork();
+					message.what = 0x123;
+				} else {
+					message.what = 0x000;
+				}
+				
 				handler.sendMessage(message);
 			}
 		};
 		thread.start();
 	}
-	
-	private static final List<Bundle> getColorList() {
+
+	private static final List<Bundle> getColorFromNetwork() {
 		colorList = new ArrayList<Bundle>();
 
 		String json = requestJSON("http://mingcolor.herokuapp.com/json");
@@ -109,4 +117,18 @@ public final class ColorModel {
 
 		return sb.toString();
 	}
+
+	private static boolean isNetworkConnected(Context context) {
+		if (context != null) {
+			ConnectivityManager mConnectivityManager = (ConnectivityManager) context
+					.getSystemService(Context.CONNECTIVITY_SERVICE);
+			NetworkInfo mNetworkInfo = mConnectivityManager
+					.getActiveNetworkInfo();
+			if (mNetworkInfo != null) {
+				return mNetworkInfo.isAvailable();
+			}
+		}
+		return false;
+	}
+	
 }
